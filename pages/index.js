@@ -16,7 +16,7 @@ export default function Home({blog}) {
             </ul>
         </div>
     );
-}
+}ø
 
 // データをテンプレートに受け渡す部分の処理を記述します
 export const getStaticProps = async () => {
