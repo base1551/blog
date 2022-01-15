@@ -96,11 +96,11 @@ export default function Home({ blog }) {
           </thead>
           <tbody>
             {blog.map((blog) => (
-              <tr className="grid grid-cols-12">
+              <tr key={blog.id} className="grid grid-cols-12">
                 <td className="px-4 py-2 grid col-span-4">
                   {blog.category.name}
                 </td>
-                <td key={blog.id} className="px-4 py-2 grid col-span-4">
+                <td className="px-4 py-2 grid col-span-4">
                   <Link href={`/blog/${blog.id}`}>
                     <a>{blog.title}</a>
                   </Link>
