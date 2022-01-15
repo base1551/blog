@@ -18,7 +18,7 @@ export default function Profile({ children }) {
       </div>
       <div className="mt-4">
         <p className="font-bold">Address</p>
-        <p className="text-xs mt-2 text-gray-600">関西のどこか</p>
+        <p className="text-xs mt-2 text-gray-600">関西</p>
         <p className="font-bold mt-2">About</p>
         <p className="text-xs mt-2 text-gray-600">1995年生</p>
       </div>

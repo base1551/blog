@@ -1,6 +1,6 @@
 // pages/blog/[id].js
 import Layout from "../../components/Layout";
-import Profile from "../../components/profile";
+import Profile from "../../components/Profile";
 import { client } from "../../libs/client";
 import styles from "../../styles/Home.module.scss";
 import Image from "next/image";
