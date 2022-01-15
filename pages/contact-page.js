@@ -6,7 +6,7 @@ const Contact = () => {
     <Layout title="Contact">
       <div className="bg-white text-center shadow-xl p-8 w-80 rounded">
         <div className="mt-4">
-          <p className="font-bold"> contact info</p>
+          <p className="font-bold">Profile</p>
         </div>
         <div className="flex justify-center mt-4">
           <Image
@@ -19,7 +19,6 @@ const Contact = () => {
         </div>
         <div className="mt-4">
           <p className="font-bold">Address</p>
-          <p className="text-xs mt-2 text-gray-600">関西のどこか</p>
           <p className="font-bold mt-3">E-mail</p>
           <p className="text-xs mt-2 text-gray-600">test@test.com</p>
           <p className="font-bold mt-3">Phone</p>

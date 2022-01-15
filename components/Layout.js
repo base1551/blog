@@ -34,14 +34,22 @@ export default function Layout({ children, title = "HP by Nextjs" }) {
                 </a>
               </Link>
             </div>
+            <div className="flex text-center">
+              {" "}
+              <Link href="/">
+                <a className="text-gray-300 hover:bg-gray-700 px-3 py-2 rouded">
+                  Jockブログ
+                </a>
+              </Link>
+            </div>
           </div>
         </nav>
       </header>
       {/* mainのタブでchidlenを表示する */}
-      <main className="w-screen">{children}</main>
+      <main className="w-screen h-80">{children}</main>
 
       {/* footer */}
-      <footer className="w-full h-12 flex justify-center border-t">
+      {/* <footer className="w-full h-12 flex justify-center border-t">
         <a
           className="flex items-center"
           href=""
@@ -50,7 +58,7 @@ export default function Layout({ children, title = "HP by Nextjs" }) {
         >
           Powered by{""}
         </a>
-      </footer>
+      </footer> */}
     </div>
   );
 }

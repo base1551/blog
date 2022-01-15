@@ -10,7 +10,7 @@ export default function BlogId({ blog }) {
   return (
     <Layout className={styles.main}>
       <div className="grid grid-cols-12">
-        <div className="grid lg:col-span-9 col-span-12 bg-white text-center shadow-xl mr-2 p-8 rounded">
+        <div className="grid lg:col-span-9 col-span-12 bg-white text-center shadow-xl m-5 p-8 rounded">
           <h1 className={styles.title}>{blog.title}</h1>
           <p className={styles.publishedAt}>{blog.publishedAt}</p>
           <p className="category">{blog.category && `${blog.category.name}`}</p>
