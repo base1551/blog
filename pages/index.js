@@ -87,7 +87,7 @@ export default function Home({ blog }) {
         {/* カテゴリ名/記事数 */}
         <p className="text-xl mr-5">Blogs（{blog.length}記事）</p>
         {/* ジャンル/タイトル */}
-        <table class="table-auto">
+        <table className="table-auto">
           <thead>
             <tr className="grid grid-cols-12 bg-gray-100">
               <th className="px-4 py-2 grid col-span-4">カテゴリ</th>
