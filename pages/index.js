@@ -6,7 +6,7 @@ import Image from "next/image";
 
 export default function Home({ blog }) {
   return (
-    <Layout title="Blog">
+    <Layout title="blog">
       {/* プロフィール最大幅 */}
       <div className="bg-white text-center shadow-xl p-8 m-5 rounded">
         <div className="mt-4">
