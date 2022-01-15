@@ -28,20 +28,20 @@ export default function Layout({ children, title = "HP by Nextjs" }) {
                   Blog
                 </a>
               </Link>
-              <Link href="contact-page">
+              <Link href="book-page">
                 <a className="text-gray-300 hover:bg-gray-700 px-3 py-2 rouded">
-                  Contact
+                  Books
                 </a>
               </Link>
             </div>
-            <div className="flex text-center">
+            {/* <div className="flex text-center">
               {" "}
               <Link href="/">
-                <a className="text-gray-300 hover:bg-gray-700 px-3 py-2 rouded">
+                <p className="text-white text-md px-3 py-2 rouded">
                   Jockブログ
-                </a>
+                </p>
               </Link>
-            </div>
+            </div> */}
           </div>
         </nav>
       </header>
