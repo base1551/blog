@@ -38,9 +38,7 @@ export default function Layout({ children, title = "HP by Nextjs" }) {
         </nav>
       </header>
       {/* mainのタブでchidlenを表示する */}
-      <main className="flex flex-1 justify-center items-center flex-col w-screen">
-        {children}
-      </main>
+      <main className="w-screen">{children}</main>
 
       {/* footer */}
       <footer className="w-full h-12 flex justify-center border-t">

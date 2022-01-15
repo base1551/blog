@@ -1,14 +1,10 @@
 import Layout from "../components/Layout";
-// pages/index.js
-import Link from "next/link";
-import { client } from "../libs/client";
 import Image from "next/image";
 
-export default function Home({ blog }) {
+const Contact = () => {
   return (
-    <Layout title="Blog">
-      {/* プロフィール最大幅 */}
-      <div className="bg-white text-center shadow-xl p-8 m-5 rounded">
+    <Layout title="Contact">
+      <div className="bg-white text-center shadow-xl p-8 w-80 rounded">
         <div className="mt-4">
           <p className="font-bold"> contact info</p>
         </div>
@@ -81,46 +77,7 @@ export default function Home({ blog }) {
           </div>
         </div>
       </div>
-
-      {/* ブログ一覧最大幅 */}
-      <div className="bg-white shadow-xl m-5 p-8 rounded  text-left grid grid-cols-1">
-        {/* カテゴリ名/記事数 */}
-        <p className="text-xl mr-5">Blogs（{blog.length}記事）</p>
-        {/* ジャンル/タイトル */}
-        <table class="table-auto">
-          <thead>
-            <tr className="grid grid-cols-12 bg-gray-100">
-              <th className="px-4 py-2 grid col-span-4">カテゴリ</th>
-              <th className="px-4 py-2 grid col-span-8">タイトル</th>
-            </tr>
-          </thead>
-          <tbody>
-            {blog.map((blog) => (
-              <tr className="grid grid-cols-12">
-                <td className="px-4 py-2 grid col-span-4">
-                  {blog.category.name}
-                </td>
-                <td key={blog.id} className="px-4 py-2 grid col-span-4">
-                  <Link href={`/blog/${blog.id}`}>
-                    <a>{blog.title}</a>
-                  </Link>
-                </td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
     </Layout>
   );
-}
-
-// データをテンプレートに受け渡す部分の処理を記述します
-// 静的生成のためのパスを指定します
-export const getStaticProps = async () => {
-  const data = await client.get({ endpoint: "blog" });
-  return {
-    props: {
-      blog: data.contents,
-    },
-  };
 };
+export default Contact;
