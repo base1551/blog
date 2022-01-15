@@ -3,7 +3,7 @@ import Layout from "../components/Layout";
 import Link from "next/link";
 import { client } from "../libs/client";
 import Image from "next/image";
-import Profile from "../components/profile";
+import Profile from "../components/Profile";
 import Skill from "../components/Skill";
 
 export default function BlogPage({ blog }) {
