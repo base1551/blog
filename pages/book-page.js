@@ -13,7 +13,7 @@ export default function BookPage({ blog }) {
         {/* ブログ一覧最大幅 */}
         <div className="grid lg:col-span-9 col-span-12 bg-white shadow-xl m-5 p-8 rounded  text-left grid-cols-1">
           {/* カテゴリ名/記事数 */}
-          <p className="text-xl mr-5">Books</p>
+          <p className="text-xl mr-5">Book</p>
           {/* ジャンル/タイトル */}
           {/* <table className="table-auto">
             <thead>
