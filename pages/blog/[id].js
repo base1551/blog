@@ -1,3 +1,5 @@
+const querystring = require("querystring");
+
 // pages/blog/[id].js
 import Layout from "../../components/Layout";
 import Profile from "../../components/Profile";
@@ -16,7 +18,7 @@ export default function BlogId({ blog }) {
           {/* className="object-cover w-full shadow-sm h-full" */}
           {/* src={blog.eye_catch.url} */}
           {/* /> */}
-          <div className="grid col-span-1 px-10 py-6 bg-gray-50 sm:text-3xl md:text-3xl lg:text-3xl xl:text-4xl font-bold text-blue-500">
+          <div className="grid col-span-1 px-10 py-6 bg-gray-50 sm:text-3xl md:text-3xl lg:text-3xl xl:text-4xl font-bold text-blue-500 prose">
             {blog.title}
           </div>
           {/* {blog.category && (
@@ -27,17 +29,14 @@ export default function BlogId({ blog }) {
                   </div>
                 )} */}
 
-          <div className="grid col-span-1 px-10 py-6 bg-gray-50">
-            {blog.body}
-          </div>
+          <div
+            className="grid col-span-1 px-10 py-6 bg-gray-50 prose prose-neutral"
+            dangerouslySetInnerHTML={{
+              __html: `${blog.body}`,
+            }}
+          ></div>
         </div>
       </div>
-
-      {/* サイドバー */}
-      {/* <div className="grid lg:col-span-3 col-span-12 h-2">
-          <Profile></Profile>
-        </div> */}
-      {/* </div> */}
     </Layout>
   );
 }
