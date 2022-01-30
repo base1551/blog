@@ -35,13 +35,13 @@ export default function Profile({ children }) {
         </div>
         {/* github */}
         <div>
-          <a
+          {/* <a
             href="https://github.com/"
             target="_blank"
             rel="noopener noreferrer"
           >
             <FaGithub size={30} />
-          </a>
+          </a> */}
         </div>
       </div>
     </div>

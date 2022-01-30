@@ -9,16 +9,14 @@ export default function Layout({ children, title = "HP by Nextjs" }) {
   //全体をラップする関数
   return (
     <div className="flex flex-col min-h-screen">
-      <header className="bg-white-100 relative flex items-center justify-between py-4 lg:px-72 px-8 border-b">
-        {/* 全体のnavバー */}
-        <div className=" flex items-center">
-          <Link href="/">
-            <a className="text-black-300 hover:bg-blue-300 px-3 py-2 rouded">
-              Home
+      <header className="relative flex items-center justify-between py-4 lg:px-20 px-4 border-b">
+        <div className="flex items-center">
+          <Link className="active" href="/">
+            <a href="/yew-blog" className="text-2xl font-bold">
+              JockBlog
             </a>
           </Link>
         </div>
-
         <button className="md:hidden block">
           <svg
             fill="currentColor"
@@ -30,67 +28,20 @@ export default function Layout({ children, title = "HP by Nextjs" }) {
             <path d="M4 22h-4v-4h4v4zm0-12h-4v4h4v-4zm0-8h-4v4h4v-4zm3 0v4h17v-4h-17zm0 12h17v-4h-17v4zm0 8h17v-4h-17v4z"></path>
           </svg>
         </button>
-        <nav className="absolute top-14 left-0 right-0 bg-white md:hidden flex flex-col md:flex-row items-center justify-between">
-          <ul className="text-center">
-            <li className="mb-2">
-              <a href="/yew-blog/profile" className="text-lg font-bold">
-                Profile
-              </a>
-            </li>
-            <li className="mb-2">
-              <a href="/yew-blog/resume" className="text-lg font-bold">
-                Resume
-              </a>
-            </li>
-            <li className="mb-2">
-              <a
-                href="https://zenn.dev/mayo_dev"
-                rel="noopener noreferrer"
-                target="_blank"
-                className="text-lg font-bold"
-              >
-                TechBlog
-              </a>
-            </li>
-          </ul>
-        </nav>
         <nav className="hidden md:block">
-          <ul className="flex items-center">
-            <li className="ml-2">
-              <a
-                href="/yew-blog"
-                className="block text-blue-500 underline transition-all p-1 hover:no-underline"
-              >
-                Home
-              </a>
+          {/* todo:nav作成 */}
+          {/* <ul>
+            <li>
+              <Link className="active" href="/">
+                <a className="text-black-300 hover:bg-gray-300 px-3 py-2 rouded">
+                  Blog
+                </a>
+              </Link>
             </li>
-            <li className="ml-2">
-              <a
-                href="/yew-blog/profile"
-                className="block text-blue-500 underline transition-all p-1 hover:no-underline"
-              >
-                Profile
-              </a>
+            <li>
+              <a href="/blog">Blog</a>
             </li>
-            <li className="ml-2">
-              <a
-                href="/yew-blog/resume"
-                className="block text-blue-500 underline transition-all p-1 hover:no-underline"
-              >
-                Resume
-              </a>
-            </li>
-            <li className="ml-2">
-              <a
-                href="https://zenn.dev/mayo_dev"
-                rel="noopener noreferrer"
-                target="_blank"
-                className="block text-blue-500 underline transition-all p-1 hover:no-underline"
-              >
-                TechBlog
-              </a>
-            </li>
-          </ul>
+          </ul> */}
         </nav>
       </header>
 
@@ -109,7 +60,7 @@ export default function Layout({ children, title = "HP by Nextjs" }) {
 
       <div className="flex flex-grow bg-gray-100"></div>
       <footer className="flex items-center justify-center lg:px-72 px-8 py-4 bg-gray-800 text-white">
-        <p className=" text-center text-xs">Copyright © 2022 JockBlog.</p>
+        <p className=" text-center text-xs">Copyright © 2022 JockRock95.</p>
       </footer>
     </div>
   );
