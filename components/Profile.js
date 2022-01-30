@@ -6,7 +6,7 @@ export default function Profile({ children }) {
   return (
     <div className="shadow-sm border border-gray-100 rounded-lg p-4 mb-6 bg-white sticky top-6">
       <div className="mt-4">
-        <p className="font-bold text-lg">ジョックブログ</p>
+        <p className="font-bold text-lg">ばーす</p>
       </div>
       <div className="flex justify-center mt-4">
         <Image
