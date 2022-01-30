@@ -4,9 +4,9 @@ import Image from "next/image";
 export default function Profile({ children }) {
   //全体をラップする関数
   return (
-    <div className="bg-white text-center shadow-xl p-8 m-5 rounded">
+    <div className="shadow-sm border border-gray-100 rounded-lg p-4 mb-6 bg-white sticky top-6">
       <div className="mt-4">
-        <p className="font-bold text-lg">ばーす</p>
+        <p className="font-bold text-lg">ジョックブログ</p>
       </div>
       <div className="flex justify-center mt-4">
         <Image

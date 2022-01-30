@@ -5,76 +5,52 @@ import { client } from "../libs/client";
 import Image from "next/image";
 import Profile from "../components/Profile";
 import Skill from "../components/Skill";
+import Moment from "react-moment";
 
 export default function Home({ blog }) {
   return (
     <Layout title="Home">
-      {/* <div className="grid grid-cols-12">
-        {/* プロフィール関係 */}
-      {/* <div className="grid col-span-12 grid-cols-2"> */}
-      {/* <div className="grid lg:col-span-1 col-span-2">
-          <Profile></Profile>
-        </div> */}
-      {/* <div className="grid lg:col-span-1 col-span-2">
-          <Skill></Skill>
-        </div>
-      </div>{" "} */}
-      {/* 記事 */}
-      <div className="grid col-span-12 border">
-        <div className="bg-white shadow-xl m-5 p-8 rounded  text-left grid grid-cols-1">
-          <p className="text-xl mr-5">Blog（{blog.length}記事）</p>
-          <table className="table-auto">
-            <thead>
-              <tr className="grid grid-cols-12 bg-gray-100">
-                <th className="px-4 py-2 grid col-span-4">カテゴリ</th>
-                <th className="px-4 py-2 grid col-span-8">タイトル</th>
-              </tr>
-            </thead>
-            <tbody>
-              {blog.map((blog) => (
-                <tr key={blog.id} className="grid grid-cols-12">
-                  <td className="px-4 py-2 grid col-span-4">
+      <ul className="grid lg:gap-6 gap-4 md:grid-cols-3 grid-cols-1">
+        {console.log(blog)}
+        {blog.map((blog) => (
+          <li
+            key={blog.id}
+            className="col-span-1 border border-gray-200 rounded-lg shadow-sm overflow-hidden bg-white transition-all hover:bg-gray-50 hover:-translate-y-1"
+          >
+            <Link href={`/blog/${blog.id}`} className="block">
+              <a className="block">
+                <div className="lg:text-7xl text-5xl p-2 text-center border-b border-gray-100">
+                  {blog.top ? (
+                    <Image
+                      src={blog.top.url}
+                      width={100}
+                      height={100}
+                      alt="blog-img"
+                    ></Image>
+                  ) : (
+                    <Image
+                      src="/PRSN01042212_1.jpeg"
+                      width={100}
+                      height={100}
+                      alt="blog-img"
+                    ></Image>
+                  )}
+                </div>
+                <div className="p-4">
+                  <h5 className="text-lg font-bold pb-3">
+                    {blog.title}
                     {blog.category.name}
-                  </td>
-                  <td className="px-4 py-2 grid col-span-4">
-                    <Link href={`/blog/${blog.id}`}>
-                      <a>{blog.title}</a>
-                    </Link>
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-        {/*
-        {/* ブログ一覧 */}
-        {/* <div className="bg-white shadow-xl m-5 p-8 rounded  text-left grid grid-cols-1"> */}
-        {/* <p className="text-xl mt-5 mr-5">Book（開設予定）</p> */}
-        {/* <table className="table-auto">
-              <thead>
-                <tr className="grid grid-cols-12 bg-gray-100">
-                  <th className="px-4 py-2 grid col-span-4">カテゴリ</th>
-                  <th className="px-4 py-2 grid col-span-8">タイトル</th>
-                </tr>
-              </thead>
-              <tbody>
-                {blog.map((blog) => (
-                  <tr key={blog.id} className="grid grid-cols-12">
-                    <td className="px-4 py-2 grid col-span-4">
-                      {blog.category.name}
-                    </td>
-                    <td className="px-4 py-2 grid col-span-4">
-                      <Link href={`/blog/${blog.id}`}>
-                        <a>{blog.title}</a>
-                      </Link>
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            </table> */}
-        {/* </div> */}
-      </div>
-      {/* </div> */}
+                  </h5>
+                  <p className="text-sm text-gray-500 pb-3">{blog.subtitle}</p>
+                  <small className="block text-sm text-right">
+                    <Moment format="YYYY-MM-DD">{blog.publishedAt}</Moment>{" "}
+                  </small>
+                </div>
+              </a>
+            </Link>
+          </li>
+        ))}
+      </ul>
     </Layout>
   );
 }
@@ -83,6 +59,7 @@ export default function Home({ blog }) {
 // 静的生成のためのパスを指定します
 export const getStaticProps = async () => {
   const data = await client.get({ endpoint: "blog" });
+  console.log(data.contents);
   return {
     props: {
       blog: data.contents,

@@ -5,23 +5,21 @@ import Layout from "../../components/Layout";
 import Profile from "../../components/Profile";
 import { client } from "../../libs/client";
 import Image from "next/image";
+import Moment from "react-moment";
 
 // pages/blog/[id].js
 export default function BlogId({ blog }) {
   return (
     <Layout>
-      {/* <div className="grid grid-cols-12"> */}
-      <div className="grid lg:col-span-9 col-span-12 bg-white shadow-xl m-5 p-8 rounded">
-        {/* <div className="bg-gray-50 px-10 py-6 mx-auto"> */}
-        <div className="grid grid-cols-1 bg-gray-50 px-10 py-6">
-          {/* <img */}
-          {/* className="object-cover w-full shadow-sm h-full" */}
-          {/* src={blog.eye_catch.url} */}
-          {/* /> */}
-          <div className="grid col-span-1 px-10 py-6 bg-gray-50 sm:text-3xl md:text-3xl lg:text-3xl xl:text-4xl font-bold text-blue-500 prose">
+      <div className="grid grid-cols-1">
+        <div className="lg:col-span-2 col-span-3 border border-gray-100 rounded-lg p-4 bg-white">
+          <article className="prose prose-slate prose-headings:border-b-2 prose-headings:border-gray-100 prose-headings:pb-2 mx-auto py-2">
             {blog.title}
-          </div>
-          {/* {blog.category && (
+          </article>
+          <Moment format="YYYY/MM/DD">{blog.publishedAt}</Moment>
+          <p></p>
+        </div>
+        {/* {blog.category && (
                   <div className="flex items-center justify-start mt-4 mb-4">
                     <div className="px-2 py-1 font-bold bg-red-400 text-white rounded-lg">
                       #{blog.category}
@@ -29,13 +27,12 @@ export default function BlogId({ blog }) {
                   </div>
                 )} */}
 
-          <div
-            className="grid col-span-1 px-10 py-6 bg-gray-50 prose prose-neutral"
-            dangerouslySetInnerHTML={{
-              __html: `${blog.body}`,
-            }}
-          ></div>
-        </div>
+        <div
+          className="grid col-span-1 px-10 py-6 prose prose-neutral"
+          dangerouslySetInnerHTML={{
+            __html: `${blog.body}`,
+          }}
+        ></div>
       </div>
     </Layout>
   );
