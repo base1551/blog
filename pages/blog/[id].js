@@ -12,7 +12,7 @@ export default function BlogId({ blog }) {
   return (
     <Layout>
       <div className="grid grid-cols-1">
-        <div className="lg:col-span-2 col-span-3 border border-gray-100 rounded-lg p-4 bg-white">
+        <div className=" col-span-1 border border-gray-100 rounded-lg p-4 bg-white">
           <article className="prose prose-slate prose-headings:border-b-2 prose-headings:border-gray-100 prose-headings:pb-2 mx-auto py-2">
             {blog.title}
           </article>
@@ -28,7 +28,7 @@ export default function BlogId({ blog }) {
                 )} */}
 
         <div
-          className="grid col-span-1 px-10 py-6 prose prose-neutral"
+          className=" col-span-1 px-10 py-6 px-0 prose prose-neutral"
           dangerouslySetInnerHTML={{
             __html: `${blog.body}`,
           }}

@@ -46,7 +46,7 @@ export default function Layout({ children, title = "HP by Nextjs" }) {
       </header>
 
       {/* mainのタブでchidlenを表示する */}
-      <main className="px-10 py-6 bg-gray-100">
+      <main className="lg:px-10 px-2 py-6 bg-gray-100">
         <div className="grid grid-cols-3 lg:gap-6 gap-4">
           <div className="lg:col-span-2 col-span-3 border border-gray-100 rounded-lg p-4 bg-white">
             {children}
