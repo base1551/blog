@@ -17,7 +17,7 @@ export default function Layout({ children, title = "HP by Nextjs" }) {
             </a>
           </Link>
         </div>
-        <button className="md:hidden block">
+        {/* <button className="md:hidden block">
           <svg
             fill="currentColor"
             height="20"
@@ -27,7 +27,7 @@ export default function Layout({ children, title = "HP by Nextjs" }) {
           >
             <path d="M4 22h-4v-4h4v4zm0-12h-4v4h4v-4zm0-8h-4v4h4v-4zm3 0v4h17v-4h-17zm0 12h17v-4h-17v4zm0 8h17v-4h-17v4z"></path>
           </svg>
-        </button>
+        </button> */}
         <nav className="hidden md:block">
           {/* todo:nav作成 */}
           {/* <ul>
