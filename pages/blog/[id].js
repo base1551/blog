@@ -12,13 +12,32 @@ export default function BlogId({ blog }) {
   return (
     <Layout>
       <div className="grid grid-cols-1">
-        <div className=" col-span-1 border border-gray-100 rounded-lg p-4 bg-white">
-          <article className="prose prose-slate prose-headings:border-b-2 prose-headings:border-gray-100 prose-headings:pb-2 mx-auto py-2">
-            {blog.title}
-          </article>
-          <Moment format="YYYY/MM/DD">{blog.publishedAt}</Moment>
-          <p></p>
+        <article className="prose prose-slate  prose-headings:pb-2 py-2">
+          <h1>{blog.title}</h1>
+        </article>
+        <Moment className="text-gray-700" format="YYYY-MM-DD">
+          {blog.publishedAt}
+        </Moment>
+        <div className="border-b border-gray-100"></div>
+
+        <div className="lg:text-7xl text-5xl p-2 text-center border-b border-gray-100">
+          {blog.top ? (
+            <Image
+              src={blog.top.url}
+              width={750}
+              height={400}
+              alt="blog-img"
+            ></Image>
+          ) : (
+            <Image
+              src="/PRSN01042212_1.jpeg"
+              width={750}
+              height={400}
+              alt="blog-img"
+            ></Image>
+          )}
         </div>
+        <div className=" col-span-1 rounded-lg p-4 bg-white"></div>
         {/* {blog.category && (
                   <div className="flex items-center justify-start mt-4 mb-4">
                     <div className="px-2 py-1 font-bold bg-red-400 text-white rounded-lg">
@@ -26,9 +45,8 @@ export default function BlogId({ blog }) {
                     </div>
                   </div>
                 )} */}
-
         <div
-          className=" col-span-1 px-10 py-6 px-0 prose prose-neutral"
+          className=" col-span-1 py-6 px-0 prose prose-neutral"
           dangerouslySetInnerHTML={{
             __html: `${blog.body}`,
           }}
