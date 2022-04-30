@@ -25,9 +25,10 @@ export default function BlogPage({ blog }) {
             <tbody>
               {blog.map((blog) => (
                 <tr key={blog.id} className="grid grid-cols-12">
-                  <td className="px-4 py-2 grid col-span-4">
-                    {blog.category.name}
-                  </td>
+                  {/*カテゴリは記事が増えた後に追加*/}
+                  {/*<td className="px-4 py-2 grid col-span-4">*/}
+                    {/*{blog.category.name}*/}
+                  {/*</td>*/}
                   <td className="px-4 py-2 grid col-span-4">
                     <Link href={`/blog/${blog.id}`}>
                       <a>{blog.title}</a>
