@@ -4,7 +4,7 @@ export const TableOfContents = ({ toc }) => {
             <p >目次</p>
             <ul>
                 {toc.map(data => (
-                    <li className="pr-2 list-inside" key={data.id}>
+                    <li className="pl-2 list-none hover:list-disc" key={data.id}>
                         <a href={`#${data.id}`}>
                             {data.text}
                         </a>

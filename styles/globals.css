@@ -1,15 +1,3 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-/*カスタム*/
-.markdown h1 h2 h3 {
-    @apply border-l-4 text-2xl;
-}
-/*.markdown ul {*/
-/*    @apply list-disc pl-10;*/
-/*}*/
-
-.markdown a {
-    @apply hover:opacity-75;
-}
