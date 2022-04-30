@@ -52,7 +52,7 @@ export default function BlogId({ blog }) {
             <TableOfContents toc={toc} />
         )}
           <div
-          className=" col-span-1 py-6 px-0 prose prose-neutral"
+          className="markdown col-span-1 py-6 px-0 prose prose-neutral"
           dangerouslySetInnerHTML={{
             __html: `${blog.body}`,
           }}
