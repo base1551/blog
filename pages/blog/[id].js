@@ -48,7 +48,9 @@ export default function BlogId({ blog }) {
                     </div>
                   </div>
                 )} */}
-          <TableOfContents toc={toc} />
+        {blog.toc_visible && (
+            <TableOfContents toc={toc} />
+        )}
           <div
           className=" col-span-1 py-6 px-0 prose prose-neutral"
           dangerouslySetInnerHTML={{
