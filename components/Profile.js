@@ -1,4 +1,4 @@
-import { FaGithub, FaTwitter } from "react-icons/fa";
+import { FaGithub, FaTwitter, FaInstagram } from "react-icons/fa";
 import Image from "next/image";
 
 export default function Profile({ children }) {
@@ -33,6 +33,15 @@ export default function Profile({ children }) {
             <FaTwitter size={30} color="#1DA1F2" />
           </a>
         </div>
+          <div>
+              <a
+                  href="https://www.instagram.com/shiga_bishoku/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+              >
+                  <FaInstagram size={30} color="" />
+              </a>
+          </div>
         {/* github */}
         <div>
           {/* <a
