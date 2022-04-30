@@ -5,7 +5,7 @@ export const TableOfContents = ({ toc }) => {
             <ul>
                 {toc.map(data => (
                     <li key={data.id}>
-                        <a href={`#${data.text}`}>
+                        <a href={`#${data.id}`}>
                             {data.text}
                         </a>
                     </li>
