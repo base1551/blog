@@ -6,9 +6,12 @@ import Profile from "../../components/Profile";
 import { client } from "../../libs/client";
 import Image from "next/image";
 import Moment from "react-moment";
+import { renderToc } from '../../libs/render-toc'; // 目次設定ファイル
+import { TableOfContents }  from '../../components/TableOfContents'; // TableOfContentsをインポートする
 
 // pages/blog/[id].js
 export default function BlogId({ blog }) {
+  const toc = renderToc(blog.body);
   return (
     <Layout>
       <div className="grid grid-cols-1">
@@ -45,7 +48,8 @@ export default function BlogId({ blog }) {
                     </div>
                   </div>
                 )} */}
-        <div
+          <TableOfContents toc={toc} />
+          <div
           className=" col-span-1 py-6 px-0 prose prose-neutral"
           dangerouslySetInnerHTML={{
             __html: `${blog.body}`,
