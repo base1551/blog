@@ -1,61 +1,43 @@
-import { FaGithub, FaTwitter, FaInstagram } from "react-icons/fa";
+import {FaGithub, FaTwitter, FaInstagram} from "react-icons/fa";
 import Image from "next/image";
 
-export default function Profile({ children }) {
-  //全体をラップする関数
-  return (
-    <div className="shadow-sm border border-gray-100 rounded-lg p-4 mb-6 bg-white sticky top-6">
-      {/*<div className="mt-4">*/}
-      {/*</div>*/}
-      <div className="flex justify-center mt-4">
-        <Image
-          className="rounded-full"
-          src="/PRSN01042212_1.jpeg"
-          width={60}
-          height={60}
-          alt="Avatar"
-        ></Image>
-          <p className="font-bold text-lg">おか</p>
-      </div>
-      <div className="mt-4">
-        <p className="font-bold">Address</p>
-        <p className="text-xs mt-2 text-gray-600">関西</p>
-        <p className="font-bold mt-2">About</p>
-        <p className="text-xs mt-2 text-gray-600">1995年生</p>
-      </div>
-      <div className="mt-6 flex justify-around">
-        <div>
-          <a
-            href="https://twitter.com/JockRock95"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block col-span-1 text-gray-300 transition-all hover:text-gray-400"
-          >
-            <FaTwitter size={30} color=""
-            />
-          </a>
-        {/*</div>*/}
-        {/*  <div>*/}
-              <a
-                  href="https://www.instagram.com/shiga_bishoku/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="pr-1 inline-block col-span-1 text-gray-300 transition-all hover:text-gray-400"
-              >
-                  <FaInstagram size={30} color="" />
-              </a>
-          </div>
-        {/* github */}
-        <div>
-          {/* <a
-            href="https://github.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FaGithub size={30} />
-          </a> */}
+export default function Profile({children}) {
+    //全体をラップする関数
+    return (
+
+
+        <div className="shadow-sm border border-gray-100 rounded-lg p-4 mb-6 bg-white sticky top-6">
+            <div className="flex items-center">
+                <Image
+                    className="rounded-full"
+                    src="/PRSN01042212_1.jpeg"
+                    width={60}
+                    height={60}
+                    alt="Avatar"
+                ></Image>
+                <div><h4 className="font-bold text-lg pb-1">おか</h4>
+                    <ul className="grid grid-cols-3 gap-3">
+                        <a
+                            href="https://twitter.com/JockRock95"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-block col-span-1 text-gray-300 transition-all hover:text-gray-400"
+                        >
+                            <FaTwitter size={30} color=""
+                            />
+                    </a>
+                        <a
+                            href="https://www.instagram.com/shiga_bishoku/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="pr-1 inline-block col-span-1 text-gray-300 transition-all hover:text-gray-400"
+                        >
+                            <FaInstagram size={30} color=""/>
+                        </a>
+                    </ul>
+                </div></div>
+            <p className="pt-3 text-sm text-gray-600">2020年4月〜関西のWeb企業に勤めている27歳。主な言語はPHP・JavaScript、フレームワークはLaravelや自社独自のフレームワークを使用。元高校球児で高校野球の蘊蓄はとても詳しい。趣味は筋トレと草野球。
+            </p>
         </div>
-      </div>
-    </div>
-  );
+);
 }
