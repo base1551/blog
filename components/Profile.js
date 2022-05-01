@@ -6,7 +6,7 @@ export default function Profile({ children }) {
   return (
     <div className="shadow-sm border border-gray-100 rounded-lg p-4 mb-6 bg-white sticky top-6">
       <div className="mt-4">
-        <p className="font-bold text-lg">ジョックブログ</p>
+        <p className="font-bold text-lg">おか</p>
       </div>
       <div className="flex justify-center mt-4">
         <Image
@@ -29,15 +29,18 @@ export default function Profile({ children }) {
             href="https://twitter.com/JockRock95"
             target="_blank"
             rel="noopener noreferrer"
+            className="inline-block col-span-1 text-gray-300 transition-all hover:text-gray-400"
           >
-            <FaTwitter size={30} color="#1DA1F2" />
+            <FaTwitter size={30} color=""
+            />
           </a>
-        </div>
-          <div>
+        {/*</div>*/}
+        {/*  <div>*/}
               <a
                   href="https://www.instagram.com/shiga_bishoku/"
                   target="_blank"
                   rel="noopener noreferrer"
+                  className="inline-block col-span-1 text-gray-300 transition-all hover:text-gray-400"
               >
                   <FaInstagram size={30} color="" />
               </a>
