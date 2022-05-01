@@ -5,9 +5,8 @@ export default function Profile({ children }) {
   //全体をラップする関数
   return (
     <div className="shadow-sm border border-gray-100 rounded-lg p-4 mb-6 bg-white sticky top-6">
-      <div className="mt-4">
-        <p className="font-bold text-lg">おか</p>
-      </div>
+      {/*<div className="mt-4">*/}
+      {/*</div>*/}
       <div className="flex justify-center mt-4">
         <Image
           className="rounded-full"
@@ -16,6 +15,7 @@ export default function Profile({ children }) {
           height={60}
           alt="Avatar"
         ></Image>
+          <p className="font-bold text-lg">おか</p>
       </div>
       <div className="mt-4">
         <p className="font-bold">Address</p>
@@ -40,7 +40,7 @@ export default function Profile({ children }) {
                   href="https://www.instagram.com/shiga_bishoku/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-block col-span-1 text-gray-300 transition-all hover:text-gray-400"
+                  className="pr-1 inline-block col-span-1 text-gray-300 transition-all hover:text-gray-400"
               >
                   <FaInstagram size={30} color="" />
               </a>
