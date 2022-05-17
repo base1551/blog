@@ -14,7 +14,7 @@ export default function BlogId({ blog }) {
   const toc = renderToc(blog.body);
   return (
     <Layout>
-      <div className="grid grid-cols-1">
+      <div className="p-8 grid grid-cols-1">
         <article className="prose prose-slate  prose-headings:pb-2 py-2">
           <h1>{blog.title}</h1>
         </article>
