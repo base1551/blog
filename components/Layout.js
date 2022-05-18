@@ -13,11 +13,11 @@ export default function Layout({ children, title = "HP by Nextjs" }) {
         </Head>
       <header className="relative flex items-center justify-between py-4 lg:px-20 px-4 border-b">
         <div className="flex items-center">
-          <Link className="active" href="/index">
-            <a className="text-2xl font-bold">
-              OkaBlog
-            </a>
-          </Link>
+          {/*<Link className="active" href="/index">*/}
+          {/*  <a className="text-2xl font-bold">*/}
+          {/*    OkaBlog*/}
+          {/*  </a>*/}
+          {/*</Link>*/}
         </div>
       </header>
 
