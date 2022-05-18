@@ -33,7 +33,7 @@ export default function BlogId({ blog }) {
             ></Image>
           ) : (
             <Image
-              src="/PRSN01042212_1.jpeg"
+              src="/profile_image.jpg"
               width={750}
               height={400}
               alt="blog-img"
