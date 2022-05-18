@@ -9,11 +9,14 @@ export default function Layout({ children, title = "HP by Nextjs" }) {
   //全体をラップする関数
   return (
     <div className="flex flex-col min-h-screen">
+        <Head>
+            <title>OkaBlog</title>
+        </Head>
       <header className="relative flex items-center justify-between py-4 lg:px-20 px-4 border-b">
         <div className="flex items-center">
           <Link className="active" href="/">
-            <a href="/yew-blog" className="text-2xl font-bold">
-              JockBlog
+            <a href="/" className="text-2xl font-bold">
+              OkaBlog
             </a>
           </Link>
         </div>
