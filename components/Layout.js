@@ -15,9 +15,7 @@ export default function Layout({ children, title = "HP by Nextjs" }) {
       <header className="relative flex items-center justify-between py-4 lg:px-20 px-4 border-b">
         <div className="flex items-center">
           <Link className="active" href="/">
-            <a href="/" className="text-2xl font-bold">
               OkaBlog
-            </a>
           </Link>
         </div>
         {/* <button className="md:hidden block">
@@ -32,19 +30,15 @@ export default function Layout({ children, title = "HP by Nextjs" }) {
           </svg>
         </button> */}
         <nav className="hidden md:block">
-          {/* todo:nav作成 */}
-          {/* <ul>
+          <ul>
             <li>
-              <Link className="active" href="/">
-                <a className="text-black-300 hover:bg-gray-300 px-3 py-2 rouded">
-                  Blog
-                </a>
+              <Link href="contact-page">
+                  <a className="text-black-300 hover:bg-blue-300 px-3 py-2 rouded">
+                    Contact
+                  </a>
               </Link>
             </li>
-            <li>
-              <a href="/blog">Blog</a>
-            </li>
-          </ul> */}
+          </ul>
         </nav>
       </header>
 
