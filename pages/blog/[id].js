@@ -27,7 +27,7 @@ export default function BlogId({ blog }) {
           {blog.top ? (
             <Image
               src={blog.top.url}
-              width={750}
+              width={500}
               height={400}
               alt="blog-img"
             ></Image>
