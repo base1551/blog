@@ -29,7 +29,7 @@ export default function Home({ blog }) {
                     ></Image>
                   ) : (
                     <Image
-                      src="/PRSN01042212_1.jpeg"
+                      src="/profile_image.jpg"
                       width={100}
                       height={100}
                       alt="blog-img"
@@ -39,7 +39,7 @@ export default function Home({ blog }) {
                 <div className="p-4">
                   <h5 className="text-lg font-bold pb-3">
                     {blog.title}
-                    {blog.category.name}
+                    {/*{blog.category.name}*/}
                   </h5>
                   <p className="text-sm text-gray-500 pb-3">{blog.subtitle}</p>
                   <small className="block text-sm text-right">
@@ -55,8 +55,6 @@ export default function Home({ blog }) {
   );
 }
 
-// データをテンプレートに受け渡す部分の処理を記述します
-// 静的生成のためのパスを指定します
 export const getStaticProps = async () => {
   const data = await client.get({ endpoint: "blog" });
   console.log(data.contents);

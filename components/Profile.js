@@ -10,7 +10,7 @@ export default function Profile({children}) {
             <div className="flex items-center">
                 <Image
                     className="rounded-full"
-                    src="/PRSN01042212_1.jpeg"
+                    src="/profile_image.jpg"
                     width={60}
                     height={60}
                     alt="Avatar"
