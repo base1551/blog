@@ -3,6 +3,6 @@ import { createClient } from "microcms-js-sdk";
 
 //ブログ作成API取得
 export const client = createClient({
-  serviceDomain: "jockblog",
+  serviceDomain: "OkaBlog",
   apiKey: process.env.API_KEY,
 });
