@@ -1,11 +1,11 @@
 import {FaGithub, FaTwitter, FaInstagram} from "react-icons/fa";
 import Image from "next/image";
+import index from "../components/Profile";
 
-export default function Profile({children}) {
+
+export default function Profile() {
     //全体をラップする関数
     return (
-
-
         <div className="shadow-sm border border-gray-100 rounded-lg p-4 mb-6 bg-white sticky top-6">
             <div className="flex items-center">
                 <Image
