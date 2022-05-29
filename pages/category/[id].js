@@ -3,12 +3,7 @@ import {client} from "../../libs/client";
 import ArticleList from "../../components/ArticleList";
 import Layout from "../../components/Layout";
 
-
 export default function CategoryId({blog, category}) {
-    // カテゴリーに紐付いたコンテンツがない場合に表示
-    if (blog.length === 0) {
-        return <div>ブログコンテンツがありません</div>;
-    }
     return (
         <Layout>
             <ArticleList article={blog} category={category}/>
