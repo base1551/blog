@@ -31,7 +31,7 @@ const MobileNav = () => {
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 20 20"
                     fill="currentColor"
-                    className="text-gray-900 dark:text-gray-100"
+                    className="text-gray-900 "
                 >
                     {navShow ? (
                         <path
@@ -49,7 +49,7 @@ const MobileNav = () => {
                 </svg>
             </button>
             <div
-                className={`fixed w-full h-full top-24 right-0 bg-gray-100 dark:bg-gray-800 opacity-95 z-10 transform ease-in-out duration-300 ${
+                className={`fixed w-full h-full top-24 right-0 bg-gray-100 opacity-95 z-10 transform ease-in-out duration-300 ${
                     navShow ? "translate-x-0" : "translate-x-full"
                 }`}
             >
@@ -65,13 +65,13 @@ const MobileNav = () => {
                         <div key={link.title} className="px-8 py-2">
                             <Link href={link.href} onClick={onToggleNav}>
                                 <div
-                                    className="flex text-lg font-medium tracking-wide text-gray-900 dark:text-gray-100">
+                                    className="flex text-lg font-medium tracking-wide text-gray-900 ">
                                     <div>・</div>
                                     <div
                                         className={
-                                            router.pathname.startsWith(link.href)
-                                                ? " border-b-2 border-gray-900 dark:border-gray-100"
-                                                : ""
+                                            // router.pathname.startsWith(link.href)
+                                            //     ? " border-b-2 border-gray-900"
+                                            ""
                                         }
                                     >
                                         {link.title}
