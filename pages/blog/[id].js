@@ -6,13 +6,23 @@ import Image from "next/image";
 import Moment from "react-moment";
 import { renderToc } from "../../libs/render-toc"; // 目次設定ファイル
 import { TableOfContents } from "../../components/TableOfContents"; // TableOfContentsをインポートする
+import Sidebar from "../../components/Sidebar";
+
+import {
+  TwitterIcon,
+  TwitterShareButton,
+  LineShareButton,
+  LineIcon,
+  HatenaShareButton,
+  HatenaIcon,
+} from "react-share";
 
 export default function BlogId({ blog, category }) {
   const toc = renderToc(blog.body);
   return (
     <Layout>
       <div className="grid grid-cols-4 lg:gap-6 gap-4">
-        <div className="lg:col-span-3 col-span-4 border border-gray-100 rounded-lg p-4 bg-white">
+        <div className="lg:col-span-3 col-span-4 border border-gray-100 rounded-lg p-2 bg-white">
           <div className="p-8 grid grid-cols-1">
             <article className="prose prose-slate  prose-headings:pb-2 py-2">
               <h1>{blog.title}</h1>
@@ -47,35 +57,33 @@ export default function BlogId({ blog, category }) {
                 __html: `${blog.body}`,
               }}
             ></div>
+            {/* シェアボタン */}
+            {/* <div>
+              <TwitterShareButton
+                className="mr-1"
+                url={window.location.href}
+                title={blog.title}
+              >
+                <TwitterIcon round={true} size={32} />
+              </TwitterShareButton>
+              <LineShareButton
+                className="mr-1"
+                url={window.location.href}
+                quote={blog.title}
+              >
+                <LineIcon round={true} size={32} />
+              </LineShareButton>
+              <HatenaShareButton
+                className="mr-1"
+                url={window.location.href}
+                quote={blog.title}
+              >
+                <HatenaIcon round={true} size={32} />
+              </HatenaShareButton>
+            </div> */}
           </div>
         </div>
-
-        {/*サイドバー*/}
-        <aside className="block lg:col-span-1 col-span-4">
-          <div className="border border-gray-200 rounded-md p-4 block bg-white">
-            <div className="pl-5 text-gray-500 text-md font-semibold my-2 bg-gray-100 border-gray-200 py-3 rounded-md px-2">
-              カテゴリー
-            </div>
-            <div className="block">
-              {category.map((category) => (
-                <div
-                  key={category.id}
-                  className="pl-5 py-1 border-b border-gray-100 truncate"
-                >
-                  <Link href={`/category/${category.id}`}>
-                    <a
-                      href=""
-                      className="cursor-pointer text-gray-500 text-sm hover:text-gray-700"
-                    >
-                      {category.name}
-                    </a>
-                  </Link>
-                </div>
-              ))}
-            </div>
-          </div>
-          <Profile />
-        </aside>
+        <Sidebar category={category} />
       </div>
     </Layout>
   );
