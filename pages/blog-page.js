@@ -27,7 +27,7 @@ export default function BlogPage({ blog }) {
                 <tr key={blog.id} className="grid grid-cols-12">
                   {/*カテゴリは記事が増えた後に追加*/}
                   {/*<td className="px-4 py-2 grid col-span-4">*/}
-                    {/*{blog.category.name}*/}
+                  {/*{blog.category.name}*/}
                   {/*</td>*/}
                   <td className="px-4 py-2 grid col-span-4">
                     <Link href={`/blog/${blog.id}`}>

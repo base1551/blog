@@ -1,5 +1,4 @@
 import Layout from "../components/Layout";
-// pages/index.js
 import Link from "next/link";
 import { client } from "../libs/client";
 import Image from "next/image";
