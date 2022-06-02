@@ -1,4 +1,4 @@
-import { FaGithub, FaTwitter, FaInstagram } from "react-icons/fa";
+import { FaGithub, FaTwitter, FaInstagram, SiQiita } from "react-icons/fa";
 import Image from "next/image";
 import index from "../components/Profile";
 
@@ -14,8 +14,8 @@ export default function Profile() {
           height={60}
           alt="Avatar"
         ></Image>
-        <div>
-          <h4 className="font-bold text-lg pb-1">おか</h4>
+        <div className="ml-2">
+          <h4 className="font-bold text-lg pb-1">Oka</h4>
           <ul className="grid grid-cols-3 gap-3">
             <a
               href="https://twitter.com/JockRock95"
