@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import Moment from "react-moment";
-import Profile from "./Profile";
 import Sidebar from "./Sidebar";
 
 export default function ArticleList({ article, category }) {
